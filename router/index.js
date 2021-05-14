@@ -1,0 +1,15 @@
+const express = require('express');
+const passport  = require('passport');
+const router = express.Router();
+const homecontroller  = require('../controller/home_controller');
+const customerCarecontroller= require('../controller/customer_care');
+router.use('/seller',require('./seller'));
+router.use('/buyer',require('./buyer'));
+router.post('/sign-up-buyer',homecontroller.buyerSign_up);
+router.post('/sign-up-seller',homecontroller.sellerSign_up);
+router.post('/sign-up-customercare',customerCarecontroller.customercare_Signup);
+router.post('/login-buyer',homecontroller.buyer_token);
+router.post('/login-seller',homecontroller.seller_token);
+router.post('/login-customercare',customerCarecontroller.Customercare_token);
+router.get('/talk/customercare',passport.authenticate('cutomercare',{session:false}),customerCarecontroller.display);
+module.exports=router ;
