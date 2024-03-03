@@ -1,7 +1,7 @@
 # Classix-Trade
 Branches 
 
-main readme
+main -> README.md
 
 client-> FrontEnd side code
 
