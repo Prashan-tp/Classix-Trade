@@ -1,4 +1,4 @@
-# E-commerce
+# Classix-Trade
 site
 main readme
 client-> FrontEnd side code
